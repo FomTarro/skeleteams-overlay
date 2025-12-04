@@ -1,0 +1,227 @@
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./material.woff2) format('woff2');
+}
+
+html {
+    --white: #F4F4F4;
+	--black: black;
+    --lighter: #646464;
+	--light: #3C3C3C;
+	--dark: #2E2D31;
+	--darker: #242328;
+	--highlight: #EBE563;
+	--pink: #FEB3D0;
+	--drop-shadow: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.45));
+    font-family: sans-serif;
+}
+
+vr {
+    border: 2px solid var(--lighter);
+    width: 0;
+    height: 100%;
+    margin: 0.5rem 0;
+    box-sizing: border-box;
+}
+
+.darker {
+    background-color: var(--darker);
+}
+
+.dark {
+    background-color: var(--dark);
+}
+
+.light {
+    background-color: var(--light);
+}
+
+.pink {
+    background-color: var(--pink);
+}
+
+body {
+    color: var(--white);
+    background-color: var(--dark);
+    margin: 0;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.full-width{
+    width: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.align-right {
+    justify-content: right;
+}
+
+.align-left {
+    justify-content: left;
+}
+
+.no-gap {
+    gap: 0;
+}
+
+.medium-gap {
+    gap: 1rem;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.icon {
+    font-size: 1.5em;
+    font-family: 'Material Symbols Outlined';
+}
+
+.icon-large {
+    font-size: 2.5em;
+}
+
+/*  */
+
+.title {
+    font-weight: bold;
+    font-size: 1.75em;
+}
+
+.subtitle {
+    font-size: 0.95em;
+    font-weight: bold;
+}
+
+.subtitle-light {
+    font-size: 0.95em;
+}
+
+.border-box {
+    outline: 2px solid var(--lighter);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.button {
+    outline: 2px solid var(--lighter);
+    border-radius: 0.5rem;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    min-width: 5em;
+    text-align: center;
+}
+
+.radio-button {
+    height: 1em;
+    width: 1em;
+    border-radius: 1em;
+    position: relative;
+    border: 2px solid var(--pink);
+}
+
+.radio-button-filled::before {
+    content: "";
+    display: block;
+    height: 0.75em;
+    width: 0.75em;
+    border-radius: 1em; 
+    background-color: var(--pink);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle-button {
+    height: 1em;
+    width: 2em;
+    border-radius: 1em;
+    position: relative;
+    border: 2px solid var(--pink);
+}
+
+.toggle-button-off::before {
+    content: "";
+    display: block;
+    height: 0.75em;
+    width: 0.75em;
+    border-radius: 1em; 
+    background-color: var(--pink);
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle-button-on::before {
+    content: "";
+    display: block;
+    height: 0.75em;
+    width: 0.75em;
+    border-radius: 1em; 
+    background-color: var(--pink);
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+
+.medium {
+    height: 100%;
+    width: 100%;
+}
+
+.small {
+    min-height: 3em;
+    max-height: 3em;
+}
+
+.pad {
+    height: 10vh;
+}
+
+.padding-top {
+    padding-top: 1em;
+}
+
+.padded-row {
+    box-sizing: border-box;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.square {
+    border-radius: 0;
+}
+
+.connection-container {
+    height: 100vh;
+    padding: 0 7em;
+    margin: auto;
+    box-sizing: border-box;
+    justify-content: center;
+}
