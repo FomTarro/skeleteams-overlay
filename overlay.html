@@ -3,25 +3,28 @@
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href='./style.css'>
 <body>
-    <div class="col connection-container">
+    <div id="connect-screen" class="col container">
         <div class="col">
             <div class="small">
                 <img class="small" src="./skeleteams_logo.png">
             </div>
-            <div class="title">Stream Title</div>
-            <div class="subtitle">Monday, December 1st - 8:00 PM EST</div>
+            <div id="stream-title" class="title">Stream Title</div>
+            <div id="stream-start-time" class="subtitle">Monday, December 1st - 8:00 PM EST</div>
         </div>
         <div class="row full-width medium-gap">
             <div id="left" class="medium">
-                <div class="border-box col full-height darker">
-                    <div class="col grow no-gap">
-                        <div class="icon icon-large">&#xf83b</div>
-                        <div>Your camera is turned off</div>
+                <div id="camera-preview-window" class="border-box col no-gap full-height chroma">
+                    <div class="col grow no-gap full-width">
+                        <div id="camera-preview-off" class="col grow no-gap full-width darker">
+                            <div class="icon icon-large">&#xf83b</div>
+                            <div>Your camera is turned off</div>
+                        </div>
                     </div>
                     <div class="light border-box full-width small square row no-margin no-gap">
                         <div class="row padded-row">
                             <div class="icon">&#xf83b</div>
-                            <div class="toggle-button toggle-button-off"></div>
+                            <div class="icon icon-small">&#xe313</div>
+                            <input type="checkbox" id="camera-preview-toggle" class="toggle-button">
                         </div>
                         <vr></vr>
                         <div class="row padded-row">
@@ -35,43 +38,53 @@
                 <div class="col">
                     <div class="light border-box full-width col no-gap">
                         <div class="row full-width small padded-row small">
-                            <div class="radio-button radio-button-filled"></div><div class="subtitle">Computer audio</div>
+                            <input id="connect-computer-audio" type="checkbox" class="radio-button" checked><label for="connect-computer-audio" class="subtitle">Computer audio</label>
                         </div>
                         <div class="col border-box darker grow full-width square no-gap">
                             <div class="row full-width padded-row small">
-                                <div class="icon">&#xe02b</div><div class="subtitle-light">Microphone (Built-in)</div><div class="grow"></div><div class="toggle-button toggle-button-off"></div>
+                                <div class="icon">&#xe02b</div>
+                                <div class="subtitle-light">Microphone (Built-in)</div>
+                                <div class="icon icon-small">&#xe313</div>
+                                <div class="grow">
+
+                                </div><input type="checkbox" class="toggle-button">
                             </div>
                             <div class="row full-width padded-row small">
-                                <div class="icon">&#xe050</div><div class="subtitle-light">Speakers (Built-in)</div>
+                                <div class="icon">&#xe050</div>
+                                <div class="subtitle-light">Speakers (Built-in)</div>
+                                <div class="icon icon-small">&#xe313</div>
                             </div>
                         </div>
                     </div>
                     <div class="light border-box full-width col no-gap small">
                         <div class="row full-width padded-row">
-                            <div class="radio-button"></div><div class="subtitle">Phone audio</div>
+                            <input type="checkbox" class="radio-button"><div class="subtitle">Phone audio</div>
                         </div>
                     </div>
                     <div class="light border-box full-width col no-gap small">
                         <div class="row full-width padded-row">
-                            <div class="radio-button"></div><div class="subtitle">Room audio</div>
+                            <input type="checkbox" class="radio-button"><div class="subtitle">Room audio</div>
                         </div>
                     </div>
                     <div class="light border-box full-width col no-gap small">
                         <div class="row full-width padded-row">
-                            <div class="radio-button"></div><div class="subtitle">Don't use audio</div>
+                            <input type="checkbox" class="radio-button"><div class="subtitle">Don't use audio</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-         <div class="row padding-top full-width align-right">
-            <div class="button dark">
+        <div class="row padding-top full-width align-right">
+            <button class="button dark">
                 Cancel
-            </div>
-            <div class="button pink">
+            </button>
+            <button class="button pink">
                 Join Now
-            </div>
+            </button>
          </div>
     </div>
 </body>
+<script src="./tokens.js"></script>
+<script src="./twitch.js"></script>
+<script src="./script.js"></script>
 </html>
